@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
+.local {
+  display: flex;
+  justify-content: center;
+  padding: 18px 16px;
+  background-color: #f3f3f3;
+  font-size: 17px;
+  position: relative;
+}
+.local__icon {
+  margin-right: 16px;
+}
+.local__text {
+  font-weight: 700;
+}
+
+.details {
+  padding: 32px;
+  text-align: center;
+  background-color: #fafafa;
+}
+.details__title {
+  margin: 0;
+}
+.details__subtitle {
+  font-weight: 300;
+  margin: 24px 0;
+}
+
+.function {
+  padding: 32px;
+}
+.function__title {
+  margin-top: 0;
+}
+.function__steps {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: compteListe;
+}
+@media (min-width: 64rem) {
+  .function__steps {
+    display: flex;
+  }
+}
+.function__step {
+  padding: 24px;
+  margin: 16px 0 16px 12px;
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
+  border-radius: 1.25rem;
+  background-color: #f6f6f6;
+  display: flex;
+  position: relative;
+}
+@media (min-width: 64rem) {
+  .function__step {
+    flex: 1;
+    margin: 0;
+    margin-left: 32px;
+  }
+  .function__step:first-child {
+    margin-left: 12px;
+  }
+}
+.function__step:first-child {
+  margin-top: 0;
+}
+.function__step:last-child {
+  margin-bottom: 0;
+}
+.function__step::before {
+  background: #9356DC;
+  height: 24px;
+  width: 24px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: absolute;
+  left: -12px;
+}
+.function__icon {
+  margin-right: 16px;
+  color: #7e7e7e;
+}
+
+.restaurants {
+  background-color: #f6f6f6;
+  padding: 32px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  column-gap: 32px;
+  row-gap: 32px;
+}
+@media (min-width: 64rem) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.card {
+  background-color: white;
+  border-radius: 16px;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.card__img {
+  height: 182px;
+  width: 100%;
+  border: transparent solid 0px;
+  border-radius: 16px 16px 0 0;
+  box-shadow: none;
+  object-fit: cover;
+}
+.card__footer {
+  padding: 16px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.card__content {
+  flex: 1;
+}
+.card__title {
+  margin: 0;
+  margin-bottom: 4px;
+}
+.card__subtitle {
+  margin: 0;
+}
+.card__btn {
+  height: 32px;
+  width: 32px;
+  background-color: transparent;
+  border: transparent 0px solid;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card__like {
+  background-color: white !important;
+}
+
+/*# sourceMappingURL=style.css.map */
