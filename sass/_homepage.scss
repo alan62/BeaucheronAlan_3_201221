@@ -1,3 +1,5 @@
+@import "_base";
+
 .local {
     display: flex;
     justify-content: center;
@@ -28,6 +30,10 @@
       font-weight: 300;
       margin: 24px 0;
     }
+
+    &__btn {
+      @include button(primary);
+    }
   
   }
   
@@ -48,6 +54,17 @@
       }
     }
   
+    &__number {
+      color: white;
+      background-color: $color-primary;
+      height: 24px;
+      width: 24px;
+      border-radius: 100px;
+      text-align: center;
+      position: absolute;
+      left: -12px;
+      top: 20px;
+    }
     &__step {
       padding: 24px;
       margin: 16px 0 16px 12px;
@@ -66,28 +83,11 @@
           margin-left: 12px;
         }
       }
-  
-      &:first-child {
-        margin-top: 0;
-      }
-  
-      &:last-child {
-        margin-bottom: 0;
-      }
-  
-      &::before {
-        background: #9356DC;
-        height: 24px;
-        width: 24px;
-        border-radius: 100px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        position: absolute;
-        left: -12px;
-      }
     }
+
+    .fa-store {
+          color: $color-primary;
+      }
   
     &__icon {
       margin-right: 16px;
