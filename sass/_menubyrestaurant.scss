@@ -1,0 +1,221 @@
+.header {
+    &--withBackArrow {
+      position: relative;
+    }
+  
+    &__arrow {
+      position: absolute;
+      left: 32px;
+      height: 32px;
+      width: 32px;
+      top: 50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      transform: translateY(-50%);
+      font-size: 18px;
+      color: black;
+    }
+  }
+  
+  .restaurantImg {
+    max-width: 100%;
+    max-height: 512px;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .menu {
+    margin-top: -64px;
+    border-radius: 32px 32px 0 0;
+    background-color: #f6f6f6;
+    z-index: 1;
+    position: relative;
+  
+    &__header {
+      padding: 16px 32px 0 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  
+    &__title {
+      font-family: "Shrikhand", "cursive";
+    }
+  
+    &__btn {
+      height: 32px;
+      width: 32px;
+      background-color: transparent;
+      border: transparent 0px solid;
+      padding: 0;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      cursor: pointer;
+      position: relative;
+      background-color: black;
+      
+      &:hover::before {
+        opacity: 1;
+      }
+      
+      &::before {
+        opacity: 0;
+        transition: 0.5s;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background:linear-gradient(0deg, $color-primary 0%,$color-secondary 100%);
+      }
+    }
+  
+    &__like {
+      transition-duration: .25s;
+      background-color: #f6f6f6;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      mix-blend-mode: lighten;
+    }
+  
+    &__btn:hover {
+      .menu__like {
+        &--noBg {
+          opacity: 0;
+        }
+      }
+    }
+  }
+  
+  .submenus {
+    display: grid;
+  
+    @media (min-width:1024px) {
+      grid-template-columns: repeat(3,1fr);
+      column-gap: 16px;
+    }
+  }
+  
+  .submenu {
+    max-width: 100%;
+    overflow: hidden;
+    padding: 0 16px;
+  
+    &__title {
+      text-transform: uppercase;
+      position: relative;
+      padding-bottom: 8px;
+      font-weight: normal;
+  
+      &::after {
+        content: "";
+        width: 48px;
+        height: 4px;
+        background-color: $color-tertiary;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+      }
+    }
+  }
+  
+  .menuItem {
+    background-color: white;
+    padding: 16px;
+    display: flex;
+    border-radius: 12px;
+    margin: 16px 0;
+    box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    cursor: pointer;
+    animation: itemAppear .6s;
+    animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
+    animation-fill-mode: both;
+    transform: scale(0);
+    max-width: 100%;
+  
+    &__header {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      flex: 1;
+    }
+  
+    &__title {
+      margin: 0;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  
+    &__description {
+      margin: 0;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  
+    &__price {
+      font-weight: bold;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      padding-right: 20px;
+    }
+  
+    &__confirmation {
+      background-color: $color-tertiary;
+      margin: -6px -80px -16px -16px;
+      width: 64px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      transition-duration: 0.5s;
+    }
+  
+    &:hover &__confirmation {
+      margin-right: -16px;
+    }
+  
+    &__wrapIcon {
+      height: 24px;
+      width: 24px;
+      background-color: white;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius: 100px;
+      transform: rotate(180deg);
+      transition-duration: 0.5s;
+  
+    }
+  
+    &:hover &__wrapIcon {
+      transform: rotate(0);
+    }
+  
+    &__icon {
+      color: $color-tertiary;
+    }
+  }
+  
+  .wrapBtn {
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    padding: 48px 0;
+  }
+  
+  .commandBtn {
+    @include button(primary);
+    cursor: pointer;
+  }
