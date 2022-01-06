@@ -72,9 +72,13 @@ body, html {
       margin-bottom: 16px;
     }
   
-    .fa-utensils,
-    .fa-hands-helping {
-        margin-right: 8px;
+    .fa-utensils {
+      width: 26px;
+      justify-content: center;
+      display: inline-flex;
+    }
+    .fa-hands-helping::before {
+      margin-right: 6px;
     }
 
     ul {

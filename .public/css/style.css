@@ -39,9 +39,13 @@ body, html {
   font-size: 20px;
   margin-bottom: 16px;
 }
-.footer .fa-utensils,
-.footer .fa-hands-helping {
-  margin-right: 8px;
+.footer .fa-utensils {
+  width: 26px;
+  justify-content: center;
+  display: inline-flex;
+}
+.footer .fa-hands-helping::before {
+  margin-right: 6px;
 }
 .footer ul {
   list-style: none;
@@ -371,6 +375,7 @@ body, html {
 }
 .menu__like {
   transition-duration: 0.25s;
+  background-color: #f6f6f6;
   position: absolute;
   top: 0;
   left: 0;
@@ -556,9 +561,13 @@ body, html {
   font-size: 20px;
   margin-bottom: 16px;
 }
-.footer .fa-utensils,
-.footer .fa-hands-helping {
-  margin-right: 8px;
+.footer .fa-utensils {
+  width: 26px;
+  justify-content: center;
+  display: inline-flex;
+}
+.footer .fa-hands-helping::before {
+  margin-right: 6px;
 }
 .footer ul {
   list-style: none;
