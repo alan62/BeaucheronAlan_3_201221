@@ -26,6 +26,7 @@ body, html {
 
 .footer {
   background-color: #353535;
+  margin-top: -40px;
 }
 .footer .container__footer {
   display: flex;
@@ -304,6 +305,40 @@ body, html {
   bottom: 25px;
   position: absolute;
 }
+.card__btn.card__btn {
+  position: absolute;
+  bottom: 20px;
+}
+.card__btn:hover::before {
+  opacity: 1;
+}
+.card__btn::before {
+  opacity: 0;
+  transition: 0.5s;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+}
+.card__like {
+  transition-duration: 0.25s;
+  background-color: #f6f6f6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  mix-blend-mode: lighten;
+}
+.card__btn:hover .menu__like--noBg {
+  opacity: 0;
+}
 .card__like {
   background-color: white !important;
 }
@@ -358,10 +393,8 @@ body, html {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  position: absolute;
+  position: relative;
   background-color: black;
-  right: 15px;
-  bottom: 25px;
 }
 .menu__btn:hover::before {
   opacity: 1;
@@ -528,6 +561,7 @@ body, html {
   transition-duration: 0.25s;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
   cursor: pointer;
+  margin-bottom: 15px;
 }
 .commandBtn:hover {
   background-color: white;
@@ -565,6 +599,7 @@ body, html {
 
 .footer {
   background-color: #353535;
+  margin-top: -40px;
 }
 .footer .container__footer {
   display: flex;

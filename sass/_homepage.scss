@@ -243,8 +243,43 @@
       justify-content:center;
       right: 15px;
       bottom: 25px;
-      position: absolute;
+      position:absolute;
     }
+    &__btn.card__btn {
+      position: absolute;
+      bottom: 20px;
+    }
+    &__btn:hover::before {
+      opacity: 1;
+    }
+    &__btn::before {
+      opacity: 0;
+      transition: 0.5s;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+    }
+    &__like {
+      transition-duration: 0.25s;
+      background-color: #f6f6f6;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      mix-blend-mode: lighten;
+    }
+    &__btn:hover .menu__like--noBg {
+      opacity: 0;
+    }
+    
   
     &__like {
       background-color: white!important;

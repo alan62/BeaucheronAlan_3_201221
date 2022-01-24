@@ -235,4 +235,5 @@
   .commandBtn {
     @include button(primary);
     cursor: pointer;
+    margin-bottom: 15px;
   }
