@@ -113,10 +113,10 @@
   }
   
 .function {
-    padding: 50px 0 0 50px;
+    padding: 32px 32px 0px 32px;
   
     &__title {
-      margin-top: 0;
+      margin-top: 25px;
     }
   
     &__steps {
@@ -135,7 +135,9 @@
       height: 24px;
       width: 24px;
       border-radius: 100px;
-      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       position: absolute;
       left: -12px;
       top: 20px;
@@ -159,10 +161,6 @@
         }
       }
     }
-
-    .fa-store {
-          color: $color-primary;
-      }
   
     &__icon {
       margin-right: 16px;
@@ -172,7 +170,7 @@
   
 .restaurants {
     background-color: #f6f6f6;
-    padding: 32px;  
+    padding: 0 32px 0 32px;  
   }
   
   .cards {
@@ -243,6 +241,9 @@
       display:flex;
       align-items:center;
       justify-content:center;
+      right: 15px;
+      bottom: 25px;
+      position: absolute;
     }
   
     &__like {

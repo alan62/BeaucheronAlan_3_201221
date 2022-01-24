@@ -137,11 +137,29 @@
     box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     cursor: pointer;
-    animation: itemAppear .8s;
-    animation-timing-function: cubic-bezier(0.2,-2,0.8,2);
-    animation-fill-mode: both;
-    transform: scale(0);
     max-width: 100%;
+
+    &.delay-0, &.delay-1, &.delay-2 {
+      animation: itemAppear .5s;
+      animation-timing-function: cubic-bezier(0.2,-2,0.8,2);
+      animation-fill-mode: both;
+      transform: scale(0);
+    }
+    &.delay-3, &.delay-4, &.delay-5 {
+      animation: itemAppear .9s;
+      animation-timing-function: cubic-bezier(0.2,-2,0.8,2);
+      animation-fill-mode: both;
+      transform: scale(0);
+    }
+    
+    &.delay-6, &.delay-7, &.delay-8 {
+      animation: itemAppear 1.3s;
+      animation-timing-function: cubic-bezier(0.2,-2,0.8,2);
+      animation-fill-mode: both;
+      transform: scale(0);
+    }
+    
+    
   
     &__header {
       white-space: nowrap;
@@ -174,7 +192,7 @@
   
     &__confirmation {
       background-color: $color-tertiary;
-      margin: -6px -80px -16px -16px;
+      margin: -15px -80px -16px -16px;
       width: 64px;
       display:flex;
       align-items:center;
@@ -212,7 +230,6 @@
     display: flex;
     text-decoration: none;
     justify-content: center;
-    padding: 48px 0;
   }
   
   .commandBtn {
