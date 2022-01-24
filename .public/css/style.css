@@ -180,10 +180,10 @@ body, html {
 }
 
 .function {
-  padding: 50px 0 0 50px;
+  padding: 32px 32px 0px 32px;
 }
 .function__title {
-  margin-top: 0;
+  margin-top: 25px;
 }
 .function__steps {
   margin: 0;
@@ -201,7 +201,9 @@ body, html {
   height: 24px;
   width: 24px;
   border-radius: 100px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   left: -12px;
   top: 20px;
@@ -225,9 +227,6 @@ body, html {
     margin-left: 12px;
   }
 }
-.function .fa-store {
-  color: #9356DC;
-}
 .function__icon {
   margin-right: 16px;
   color: #7e7e7e;
@@ -235,7 +234,7 @@ body, html {
 
 .restaurants {
   background-color: #f6f6f6;
-  padding: 32px;
+  padding: 0 32px 0 32px;
 }
 
 .cards {
@@ -301,6 +300,9 @@ body, html {
   display: flex;
   align-items: center;
   justify-content: center;
+  right: 15px;
+  bottom: 25px;
+  position: absolute;
 }
 .card__like {
   background-color: white !important;
@@ -356,8 +358,10 @@ body, html {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  position: relative;
+  position: absolute;
   background-color: black;
+  right: 15px;
+  bottom: 25px;
 }
 .menu__btn:hover::before {
   opacity: 1;
@@ -430,11 +434,25 @@ body, html {
   box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   cursor: pointer;
-  animation: itemAppear 0.8s;
+  max-width: 100%;
+}
+.menuItem.delay-0, .menuItem.delay-1, .menuItem.delay-2 {
+  animation: itemAppear 0.5s;
   animation-timing-function: cubic-bezier(0.2, -2, 0.8, 2);
   animation-fill-mode: both;
   transform: scale(0);
-  max-width: 100%;
+}
+.menuItem.delay-3, .menuItem.delay-4, .menuItem.delay-5 {
+  animation: itemAppear 0.9s;
+  animation-timing-function: cubic-bezier(0.2, -2, 0.8, 2);
+  animation-fill-mode: both;
+  transform: scale(0);
+}
+.menuItem.delay-6, .menuItem.delay-7, .menuItem.delay-8 {
+  animation: itemAppear 1.3s;
+  animation-timing-function: cubic-bezier(0.2, -2, 0.8, 2);
+  animation-fill-mode: both;
+  transform: scale(0);
 }
 .menuItem__header {
   white-space: nowrap;
@@ -463,7 +481,7 @@ body, html {
 }
 .menuItem__confirmation {
   background-color: #99E2D0;
-  margin: -6px -80px -16px -16px;
+  margin: -15px -80px -16px -16px;
   width: 64px;
   display: flex;
   align-items: center;
@@ -495,7 +513,6 @@ body, html {
   display: flex;
   text-decoration: none;
   justify-content: center;
-  padding: 48px 0;
 }
 
 .commandBtn {
